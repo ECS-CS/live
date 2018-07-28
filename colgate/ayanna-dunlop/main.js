@@ -11,6 +11,7 @@ const reset = document.getElementById("reset");
 
 // #2
 startBTN.addEventListener("click", createBoard);
+
 // DO NOT TOUCH
 const finalScore = document.querySelector(".finalScore");
 reset.addEventListener("click", () => window.location.reload());
@@ -151,6 +152,7 @@ function gameTimer() {
         gameoverDiv.style.display = "block";
         finalScore.textContent = score;
       }, 1500);
+
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
 
@@ -169,7 +171,7 @@ function checkForMatch() {
   if(selectedCards[0].card.match === selectedCards[1].card.match){
 
     // #2
-   score++;
+    score++;
     timer = timer + 5;
 
     // #3
@@ -275,10 +277,11 @@ function gameOver(){
 
     // #2
     status.textContent = 'Good Job I guess';
+    
     // DO NOT TOUCH
-scoreTime.remove();
-status.remove();
-scoreDiv.remove();
+    scoreTime.remove();
+    status.remove();
+    scoreDiv.remove();
 
     // DON'T TOUCH BELOW
     time.textContent = '';

@@ -1,0 +1,216 @@
+body {
+  font-size: 45px;
+  letter-spacing: 4px;
+  font-style: italic;
+  font-family: "Fjalla One", sans-serif;
+  background-color: #8ee5ee;
+}
+
+h1 {
+  color: white;
+  font-family: Anton;
+  font-size: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+* GAMEOVER
+*/
+
+#gameover {
+  color: white;
+  display: none;
+  text-align: center;
+  border: 10px dotted;
+  background-color: #ffdab9;
+  width: 50%;
+  margin: 20px auto;
+  transition: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#gameover:hover {
+  cursor: crosshair;
+  border: 10px dashed;
+}
+
+.gameover {
+  color: #f44336;
+  font-size: 120px;
+}
+
+.gameover:hover {
+  color: #008cba;
+}
+
+.tryAgain {
+  font-size: 60px;
+}
+
+.finalScore {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #99ffcc;
+  border: dotted;
+  border-radius: 20px;
+  padding: 16px 40px;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  text-transform: capitalize;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #ff0066;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+* GAME DESCRIPTION
+*/
+
+#desc {
+  width: 75%;
+  margin: 20px auto;
+}
+
+#score,
+#time {
+  font-weight: 700;
+  font-style: italic;
+}
+
+#score {
+  font-size: 90px;
+}
+
+#time {
+  font-size: 22px;
+  font-weight: 300;
+  padding: 20px;
+}
+
+#status {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+#scoreTime {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px;
+  height: 80px;
+}
+
+#score {
+  justify-self: end;
+}
+
+#time {
+  justify-self: start;
+  align-self: center;
+  margin: 10px;
+}
+
+/*
+* SCORE
+*/
+
+.badScore {
+  color: firebrick;
+}
+
+.goodScore {
+  color: green;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+#info {
+  text-align: center;
+}
+
+.fade {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/*
+* CARD
+*/
+
+.scene {
+  width: 150px;
+  height: 210px;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card img:hover {
+  cursor: crosshair;
+}
+
+/*
+* ANIMATIONS
+*/
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

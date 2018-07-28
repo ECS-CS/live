@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Memory Game</title>
+</head>
+
+<body>
+  <div id="info">
+    <h1>Memory Game</h1>
+    <button id="start">Start Game</button>
+    <div id="gameover">
+      <h1 class="gameover">You're Done</h1>
+      <p class="tryAgain">You ended with a score of
+        <span class="finalScore"></span>.
+        <br>
+        <button id="reset">New Game</button>
+      </p>
+    </div>
+    <div id="scoreTime">
+      <div id="score"></div>
+      <div id="time"></div>
+    </div>
+    <div id="status"></div>
+    <div id="desc"> Match the cards
+      <br> Win a prize</div>
+  </div>
+  <div id="app"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>

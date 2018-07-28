@@ -37,6 +37,7 @@ const cards = [
 ];
 
 const dupCards = cards.map(c => c).concat(cards);
+
 /*
 * STEP 4
 */
@@ -63,6 +64,7 @@ function randomColor(arr) {
   // #1
   return arr[random];
 }
+
 /*
 * STEP 6
 */

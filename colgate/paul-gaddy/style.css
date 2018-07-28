@@ -1,0 +1,218 @@
+body {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-style: bold;
+  font-family: "monospace", Comic Sans MS;
+  background-image: url("https://sslh.ulximg.com/image/740x493/cover/1527607391_b1d1f5ca7bb00474b9c2f10ceb4bcff9.jpg/3d3db45809e3760ce3a6878f4d7791d0/1527607391_acc782458242f4fa0b8864e5aff51332.jpg");
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 75px;
+  margin: 3;
+  padding: 6;
+  color: #f4f11a;
+  font-weight: 900;
+  text-shadow: 1px 1px;
+  text-decoration: black wavy underline;
+}
+
+/*
+* GAMEOVER
+*/
+#gameover {
+  display: none;
+  text-align: center;
+  background-image: url
+    (
+      "http://s3.amazonaws.com/hiphopdx-production/2017/10/post-malone-1-800x600.jpg"
+    );
+  width: 20%;
+  margin: 0 auto;
+  transition: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#gameover:hover {
+  cursor: crosshair;
+}
+.gameover {
+  color: #033584;
+  font-size: 90px;
+}
+
+.gameover:hover {
+  color: #008cba;
+}
+
+.tryAgain {
+  font-size: 60px;
+}
+
+.finalScore {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: linear-gradient(red, yellow, green);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+  text-shadow: 1px 1px 10px red;
+}
+
+button:hover {
+  background-color: #0c0b0b;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+/*
+* GAME DESCRIPTION
+*/
+#desc {
+  width: 25%;
+  margin: 20px auto;
+  color: #24d827;
+  text-shadow: 0 0 15px #ff0000, 0 0 15px #0000ff;
+}
+
+#score,
+#time {
+  font-weight: 900;
+  font-style: italic;
+}
+
+#score {
+  font-size: 100px;
+}
+
+#time {
+  font-size: 27px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+#status {
+  font-size: 30px;
+  text-transform: italic;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+#scoreTime {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px;
+  height: 80px;
+}
+
+#score {
+  justify-self: end;
+}
+
+#time {
+  justify-self: start;
+  align-self: center;
+  margin: 10px;
+}
+
+/*
+* SCORE
+*/
+
+.badScore {
+  color: firebrick;
+}
+
+.goodScore {
+  color: green;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 13px;
+  align-content: center;
+  justify-content: center;
+}
+
+#info {
+  text-align: center;
+}
+
+.fade {
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/*
+* CARD
+*/
+
+.scene {
+  width: 150px;
+  height: 210px;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card img:hover {
+  cursor: crosshair;
+}
+
+/*
+* ANIMATIONS
+*/
+@keyframes fadeOut {
+  0% {
+    opacity: 4;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

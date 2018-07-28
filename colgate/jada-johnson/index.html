@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Memory Game</title>
+</head>
+
+<body>
+  <div id="info">
+    <h1>How good is your memory??</h1>
+    <button id="start">Start Game</button>
+    <div id="gameover">
+      <h1 class="gameover">Gameover!</h1>
+      <p class="tryAgain">You ended with a score of
+        <span class="finalScore"></span>.
+        <br>
+        <button id="reset">New Game</button>
+      </p>
+    </div>
+    <div id="scoreTime">
+      <div id="score"></div>
+      <div id="time"></div>
+    </div>
+    <div id="status"></div>
+    <div id="desc">Matching games are games that require players to match similar elements.
+      <br> PLAYERS ARE EXPECTED TO MATCH IDENTICAL PICTURES.</div>
+  </div>
+  <div id="app"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>
