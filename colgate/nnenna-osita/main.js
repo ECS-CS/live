@@ -25,7 +25,8 @@ const cards = [
   },
   {
     match: "kylie",
-    src:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-03-12-at-11-49-54-1520855436.jpg"
+    src:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-03-12-at-11-49-54-1520855436.jpg"
   },
   {
     match: "icecream",
@@ -46,13 +47,15 @@ const cards = [
     src: "https://petinsider.com/wp-content/uploads/2017/03/8Oyc8.So_.79.jpeg"
   },
   {
-  match: "lebron",
-  src:"https://uproxx.files.wordpress.com/2017/06/lebron-lakers-feat.jpg?quality=95&w=650"
+    match: "lebron",
+    src:
+      "https://uproxx.files.wordpress.com/2017/06/lebron-lakers-feat.jpg?quality=95&w=650"
   },
   {
     match: "gucci",
-    src: "https://images.harrods.com/product/gucci/pursuit-trek-slides_000000005625128009_f.jpg?dwn=767px:873px" 
-  },
+    src:
+      "https://images.harrods.com/product/gucci/pursuit-trek-slides_000000005625128009_f.jpg?dwn=767px:873px"
+  }
 ];
 
 const dupCards = cards.map(c => c).concat(cards);
@@ -201,6 +204,7 @@ function checkForMatch() {
   // DON'T TOUCH BELOW
   scoreDiv.textContent = score;
 }
+
 /*
 * STEP 9
 */
@@ -261,31 +265,31 @@ function flipCard() {
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'yeeeeeeeeees! great job';
+    status.textContent = "yeeeeeeeeees! great job";
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
 
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
+
 /*
 * STEP 13
 */

@@ -18,47 +18,54 @@ reset.addEventListener("click", () => window.location.reload());
 
 // CREATE AN ARRAY NAMED cards AND INSERT OBJECTS INTO OUR ARRAY
 const cards = [
-    {
+  {
     match: "Puppy",
-    src: "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg"
+    src:
+      "http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg"
   },
   {
-    match: "Lewis", 
-    src: "https://i.pinimg.com/originals/b0/64/b7/b064b7e175d4c9a5e453ba0f9c7c36be.jpg"
+    match: "Lewis",
+    src:
+      "https://i.pinimg.com/originals/b0/64/b7/b064b7e175d4c9a5e453ba0f9c7c36be.jpg"
   },
   {
-    match:"Harlow",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO_Y6zE8TT_lbwjqh6E9nySS16jfUEX85WYseFpO2HJGywL_esQg"
+    match: "Harlow",
+    src:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO_Y6zE8TT_lbwjqh6E9nySS16jfUEX85WYseFpO2HJGywL_esQg"
   },
   {
-    match:"Khaleesi",
-    src:"https://vignette.wikia.nocookie.net/gameofthrones/images/5/5f/Daenerys_Dragonpit.jpg/revision/latest?cb=20171015095128"
+    match: "Khaleesi",
+    src:
+      "https://vignette.wikia.nocookie.net/gameofthrones/images/5/5f/Daenerys_Dragonpit.jpg/revision/latest?cb=20171015095128"
   },
   {
-    match:"Love",
-    src:"https://1.bp.blogspot.com/--0dxindC7BI/WpB2gGgc1NI/AAAAAAABQgQ/9NJTWwIzvn8tBRfagF0l1RRVyW0RRMFLgCEwYBhgL/s1600/India-love-1.png"
+    match: "Love",
+    src:
+      "https://1.bp.blogspot.com/--0dxindC7BI/WpB2gGgc1NI/AAAAAAABQgQ/9NJTWwIzvn8tBRfagF0l1RRVyW0RRMFLgCEwYBhgL/s1600/India-love-1.png"
   },
   {
-    match:"Kehlani",
-    src: "https://78.media.tumblr.com/56b66306bd0f7ceb5a09b902ec05bed6/tumblr_p49fo7T9w61wnztypo1_500.png"
+    match: "Kehlani",
+    src:
+      "https://78.media.tumblr.com/56b66306bd0f7ceb5a09b902ec05bed6/tumblr_p49fo7T9w61wnztypo1_500.png"
   },
   {
-    match:"Taylor",
-  src:"https://ugc.reveliststatic.com/gen/constrain/640/640/80/2017/09/13/14/8g/29/ph7f5be1wk2qbwe.jpg"
+    match: "Taylor",
+    src:
+      "https://ugc.reveliststatic.com/gen/constrain/640/640/80/2017/09/13/14/8g/29/ph7f5be1wk2qbwe.jpg"
   },
   {
-    match:"Zendaya",
-    src:"https://www.wellandgood.com/wp-content/uploads/2017/08/zendaya-natural-beauty-routine.jpg"
+    match: "Zendaya",
+    src:
+      "https://www.wellandgood.com/wp-content/uploads/2017/08/zendaya-natural-beauty-routine.jpg"
   },
   {
-    match:"Puppy2",
-    src:"http://cdn.akc.org/content/hero/puppy-boundaries_header.jpg"
+    match: "Puppy2",
+    src: "http://cdn.akc.org/content/hero/puppy-boundaries_header.jpg"
   },
   {
-    match:"Beagle Puppy",
-    src:"https://www.petmd.com/sites/default/files/petmd-puppy-weight.jpg"
-  },
-
+    match: "Beagle Puppy",
+    src: "https://www.petmd.com/sites/default/files/petmd-puppy-weight.jpg"
+  }
 ];
 
 //Step 3
@@ -75,7 +82,16 @@ let selectedCards = [];
 let score = 0;
 
 // #3
-let colors = ["#e6005c", "#660033","#8533ff","#ffffff","black","red","#8cff1a","purple" ];
+let colors = [
+  "#e6005c",
+  "#660033",
+  "#8533ff",
+  "#ffffff",
+  "black",
+  "red",
+  "#8cff1a",
+  "purple"
+];
 
 // #4
 let timer = 120;
@@ -155,7 +171,6 @@ function gameTimer() {
 
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
-
       // #3
       document.body.style.background = randomColor(colors);
     }
@@ -168,20 +183,19 @@ function gameTimer() {
 
 function checkForMatch() {
   // #1
-  if(selectedCards[0].card.match === selectedCards[1].card.match){
-
+  if (selectedCards[0].card.match === selectedCards[1].card.match) {
     // #2
     score++;
     timer = timer + 5;
 
     // #3
-    status.textContent = 'Good Job!!!';
+    status.textContent = "Good Job!!!";
 
     // DON'T TOUCH BELOW
-    updateClass('goodScore', 'badScore');
+    updateClass("goodScore", "badScore");
     selectedCards.forEach(card => {
-      card.element.classList.add('match');
-      setTimeout(() => card.element.classList.add('fade'), 300);
+      card.element.classList.add("match");
+      setTimeout(() => card.element.classList.add("fade"), 300);
     });
   } else {
     // #4
@@ -189,10 +203,10 @@ function checkForMatch() {
     timer = timer - 2;
 
     // #5
-    status.textContent = 'YOU SUCK';
+    status.textContent = "YOU SUCK";
 
     // DON'T TOUCH BELOW
-    updateClass('badScore', 'goodScore');
+    updateClass("badScore", "goodScore");
     flipBack(selectedCards);
   }
 
@@ -233,7 +247,6 @@ function flipBack(cards) {
 */
 
 function flipCard() {
-
   // DON'T TOUCH BELOW
   const card = this;
   const index = card.dataset.index;
@@ -246,13 +259,11 @@ function flipCard() {
 
   // #1
   if (selectedCards.length === 2) {
-
     // #2
     if (selectedCards[0].element !== selectedCards[1].element) {
       // DON'T TOUCH BELOW
       setTimeout(() => checkForMatch(), 300);
     } else {
-
       // DON'T TOUCH BELOW
       status.textContent = "Can't choose the same card twice! Try again!";
 
@@ -269,30 +280,29 @@ function flipCard() {
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'Good Job I guess';
-    
+    status.textContent = "Good Job I guess";
+
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
 
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
 

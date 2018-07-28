@@ -34,25 +34,34 @@ const cards = [
   },
   {
     match: "Ddg and Kennedy",
-    src: "https://pbs.twimg.com/profile_images/946256910344364033/5JSQYg0S_400x400.jpg"
-  },
-  { match: "Jilly Anais",
-    src: "https://m.media-amazon.com/images/M/MV5BNjVkMDVlNWYtY2E1ZS00ZDIxLWI1NTEtYjEyMmU2NTdiODc2XkEyXkFqcGdeQXVyNDc4NzI5NzM@._V1_SY1000_CR0,0,798,1000_AL_.jpg"
-  },
-  { match: " Queen Najia",
-    src: "https://i.pinimg.com/236x/cb/f6/08/cbf608372ad0d00681e3e4cd62f1a06e.jpg"
-  },
-  { match: "Kaylabylon",
-    src: "https://pbs.twimg.com/media/Db5h2P8W0AQocml.jpg"
-  },
-  { match: "yasssmeeaan",
-    src: "https://www.celebslifereel.com/wp-content/uploads/2018/05/Yasmeen-Nicole.jpg"
+    src:
+      "https://pbs.twimg.com/profile_images/946256910344364033/5JSQYg0S_400x400.jpg"
   },
   {
-    match:"India Love",
-    src: "https://everipedia-storage.s3-accelerate.amazonaws.com/ProfilePics/india-love__31691.png"
+    match: "Jilly Anais",
+    src:
+      "https://m.media-amazon.com/images/M/MV5BNjVkMDVlNWYtY2E1ZS00ZDIxLWI1NTEtYjEyMmU2NTdiODc2XkEyXkFqcGdeQXVyNDc4NzI5NzM@._V1_SY1000_CR0,0,798,1000_AL_.jpg"
+  },
+  {
+    match: "Queen Najia",
+    src:
+      "https://i.pinimg.com/236x/cb/f6/08/cbf608372ad0d00681e3e4cd62f1a06e.jpg"
+  },
+  {
+    match: "Kaylabylon",
+    src: "https://pbs.twimg.com/media/Db5h2P8W0AQocml.jpg"
+  },
+  {
+    match: "yasssmeeaan",
+    src:
+      "https://www.celebslifereel.com/wp-content/uploads/2018/05/Yasmeen-Nicole.jpg"
+  },
+  {
+    match: "India Love",
+    src:
+      "https://everipedia-storage.s3-accelerate.amazonaws.com/ProfilePics/india-love__31691.png"
   }
-]; 
+];
 
 const dupCards = cards.map(c => c).concat(cards);
 
@@ -144,7 +153,7 @@ function gameTimer() {
         gameoverDiv.style.display = "block";
         finalScore.textContent = score;
       }, 1500);
-      
+
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
       // #3
@@ -256,28 +265,27 @@ function flipCard() {
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'Game Over, wanna play again?';
+    status.textContent = "Game Over, wanna play again?";
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
 
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
 

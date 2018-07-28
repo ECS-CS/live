@@ -59,11 +59,13 @@ const cards = [
   },
   {
     match: "TLC",
-    src:"https://i.pinimg.com/originals/bd/55/d9/bd55d9cfbc859ce8067f21a445515c56.jpg"
+    src:
+      "https://i.pinimg.com/originals/bd/55/d9/bd55d9cfbc859ce8067f21a445515c56.jpg"
   },
   {
     match: "Destiny",
-    src:"http://dazedimg.dazedgroup.netdna-cdn.com/900/azure/dazed-prod/1120/3/1123009.jpg"
+    src:
+      "http://dazedimg.dazedgroup.netdna-cdn.com/900/azure/dazed-prod/1120/3/1123009.jpg"
   }
 ];
 
@@ -269,30 +271,29 @@ function flipCard() {
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'You Did Okay';
-    
+    status.textContent = "You Did Okay";
+
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
 
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
 

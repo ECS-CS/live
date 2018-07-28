@@ -20,19 +20,23 @@ reset.addEventListener("click", () => window.location.reload());
 const cards = [
   {
     match: "1",
-    src: "https://i.pinimg.com/564x/a0/33/34/a03334209c89761cb29771b94878ac61.jpg"
+    src:
+      "https://i.pinimg.com/564x/a0/33/34/a03334209c89761cb29771b94878ac61.jpg"
   },
   {
     match: "2",
-    src: "https://i.pinimg.com/564x/5f/98/25/5f98258e2031eafe62b9b01171fabf56.jpg"
+    src:
+      "https://i.pinimg.com/564x/5f/98/25/5f98258e2031eafe62b9b01171fabf56.jpg"
   },
   {
     match: "3",
-    src: "http://www.ctmglifestyle.com/images/SK206KCUZAYm/men-air-jordan-4-shoes-black-81NZ.jpg"
+    src:
+      "http://www.ctmglifestyle.com/images/SK206KCUZAYm/men-air-jordan-4-shoes-black-81NZ.jpg"
   },
   {
     match: "4",
-    src: "https://sneakernews.com/wp-content/uploads/2017/03/air-jordan-13-dmp-release-info-0.jpg"
+    src:
+      "https://sneakernews.com/wp-content/uploads/2017/03/air-jordan-13-dmp-release-info-0.jpg"
   }
 ];
 
@@ -126,6 +130,7 @@ function gameTimer() {
         gameoverDiv.style.display = "block";
         finalScore.textContent = score;
       }, 1500);
+
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
       // #3
@@ -244,10 +249,12 @@ function gameOver() {
   if (chosen.length === dupCards.length) {
     // #2
     status.textContent = "Try again next time!!";
+
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
+
     // DON'T TOUCH BELOW
     time.textContent = "";
     clearInterval(window.myMatchingGameInterval);

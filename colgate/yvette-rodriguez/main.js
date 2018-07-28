@@ -36,7 +36,7 @@ const cards = [
     match: "blackpink",
     src: "https://pbs.twimg.com/media/DCpGenAVoAEThGg.jpg:large"
   },
-  
+
   {
     match: "red velvet",
     src:
@@ -68,7 +68,9 @@ const cards = [
   },
   {
     match: "exid",
-    src:"https://ae01.alicdn.com/kf/HTB1z8tbarEF6uJjSZFOq6xUvVXad/New-Kpop-EXID-Hand-Lamp-Lights-Official-Concert-Glow-Stick-lamp.jpg"  }
+    src:
+      "https://ae01.alicdn.com/kf/HTB1z8tbarEF6uJjSZFOq6xUvVXad/New-Kpop-EXID-Hand-Lamp-Lights-Official-Concert-Glow-Stick-lamp.jpg"
+  }
 ];
 
 const dupCards = cards.map(c => c).concat(cards);
@@ -76,6 +78,7 @@ const dupCards = cards.map(c => c).concat(cards);
 /*
 * STEP 4
 */
+
 // #1
 let selectedCards = [];
 // #2
@@ -97,6 +100,7 @@ let colors = [
 
 // #4
 let timer = 80;
+
 /*
 * STEP 5
 */
@@ -134,6 +138,7 @@ function shuffle(array) {
 
   return array;
 }
+
 /*
 * STEP 7
 */
@@ -175,6 +180,7 @@ function gameTimer() {
     }
   }, 1000);
 }
+
 /*
 * STEP 8
 */
@@ -215,6 +221,7 @@ function checkForMatch() {
   // DON'T TOUCH BELOW
   scoreDiv.textContent = score;
 }
+
 /*
 * STEP 9
 */
@@ -223,6 +230,7 @@ function updateClass(newClass, oldClass) {
   scoreDiv.classList.remove(oldClass);
   scoreDiv.classList.add(newClass);
 }
+
 /*
 * STEP 10
 */
@@ -235,6 +243,7 @@ function flipBack(cards) {
     )
   );
 }
+
 /*
 * STEP 11
 */
@@ -268,6 +277,7 @@ function flipCard() {
     }
   }
 }
+
 /*
 * STEP 12
 */
@@ -296,6 +306,7 @@ function gameOver() {
     }, 3000);
   }
 }
+
 /*
 * STEP 13
 */

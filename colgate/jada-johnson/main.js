@@ -73,7 +73,8 @@ let score = 0;
 let colors = ["#4dd2ff", "#cc66ff", "#ff8095", "#8cff1a"];
 
 // #4
-let timer = 45;
+let timer = 60;
+
 /*
 * STEP 5
 */
@@ -84,6 +85,7 @@ function randomColor(arr) {
   // #1
   return arr[random];
 }
+
 /*
 * STEP 6
 */
@@ -111,6 +113,7 @@ function shuffle(array) {
 
   return array;
 }
+
 /*
 * STEP 7
 */
@@ -144,7 +147,7 @@ function gameTimer() {
         gameoverDiv.style.display = "block";
         finalScore.textContent = score;
       }, 1500);
-      
+
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
       // #3
@@ -152,6 +155,7 @@ function gameTimer() {
     }
   }, 1000);
 }
+
 /*
 * STEP 8
 */
@@ -194,6 +198,7 @@ function checkForMatch() {
   // DON'T TOUCH BELOW
   scoreDiv.textContent = score;
 }
+
 /*
 * STEP 9
 */
@@ -202,6 +207,7 @@ function updateClass(newClass, oldClass) {
   scoreDiv.classList.remove(oldClass);
   scoreDiv.classList.add(newClass);
 }
+
 /*
 * STEP 10
 */
@@ -214,6 +220,7 @@ function flipBack(cards) {
     )
   );
 }
+
 /*
 * STEP 11
 */
@@ -247,6 +254,7 @@ function flipCard() {
     }
   }
 }
+
 /*
 * STEP 12
 */
@@ -275,6 +283,7 @@ function gameOver() {
     }, 3000);
   }
 }
+
 /*
 * STEP 13
 */

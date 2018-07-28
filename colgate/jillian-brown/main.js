@@ -28,7 +28,6 @@ const cards = [
     src:
       "https://vignette.wikia.nocookie.net/booga-booga-roblox/images/6/67/RobloxScreenShot20180224_153321542.png/revision/latest?cb=20180225023241"
   },
-
   {
     match: "Shelly",
     src:
@@ -59,7 +58,7 @@ const cards = [
     src:
       "https://vignette.wikia.nocookie.net/rblx-booga-booga/images/0/07/Oldgod.png/revision/latest?cb=20180222085635"
   },
-   {
+  {
     match: "Pro",
     src: "https://i.ytimg.com/vi/reUoPP5Rgd8/maxresdefault.jpg"
   }
@@ -87,6 +86,7 @@ let colors = [
   "#B22222",
   "#DB7093"
 ];
+
 // #4
 let timer = 60;
 
@@ -100,6 +100,7 @@ function randomColor(arr) {
   // #1
   return arr[random];
 }
+
 /*
 * STEP 6
 */
@@ -127,6 +128,7 @@ function shuffle(array) {
 
   return array;
 }
+
 /*
 * STEP 7
 */
@@ -160,6 +162,7 @@ function gameTimer() {
         gameoverDiv.style.display = "block";
         finalScore.textContent = score;
       }, 1500);
+
       // DO NOT TOUCH
     } else if (timer % 10 === 0) {
       // #3
@@ -167,6 +170,7 @@ function gameTimer() {
     }
   }, 1000);
 }
+
 /*
 * STEP 8
 */
@@ -206,6 +210,7 @@ function checkForMatch() {
   // DON'T TOUCH BELOW
   scoreDiv.textContent = score;
 }
+
 /*
 * STEP 9
 */
@@ -214,6 +219,7 @@ function updateClass(newClass, oldClass) {
   scoreDiv.classList.remove(oldClass);
   scoreDiv.classList.add(newClass);
 }
+
 /*
 * STEP 10
 */
@@ -226,6 +232,7 @@ function flipBack(cards) {
     )
   );
 }
+
 /*
 * STEP 11
 */
@@ -259,36 +266,37 @@ function flipCard() {
     }
   }
 }
+
 /*
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length ){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'You owe me coffee byeeee.';
+    status.textContent = "You owe me coffee byeeee.";
     // DO NOT TOUCH
 
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
-    
+
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
+
 /*
 * STEP 13
 */

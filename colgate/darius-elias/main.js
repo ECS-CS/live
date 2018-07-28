@@ -57,7 +57,7 @@ const cards = [
     match: "crack shot",
     src:
       "https://www.breakflip.com/uploads/AAA/Epic%20Games/Fortnite/Skins/fortnite-outfit-crackshot-hd-400x418.jpg"
-  } 
+  }
 ];
 
 const dupCards = cards.map(c => c).concat(cards);
@@ -265,38 +265,35 @@ function flipCard() {
   }
 }
 
-
 /*
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'THAT TOOK FOREVER';
-    
+    status.textContent = "THAT TOOK FOREVER";
+
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
 
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
 }
-
 
 /*
 * STEP 13

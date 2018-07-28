@@ -39,22 +39,24 @@ const cards = [
   },
   {
     match: "America Led Mask",
-    src: "https://cdn.shopify.com/s/files/1/2595/0760/products/Green_Bigger_237fd0fd-b61f-4564-a996-0505a8641a90_1024x1024.jpg?v=1512357764"
-  
+    src:
+      "https://cdn.shopify.com/s/files/1/2595/0760/products/Green_Bigger_237fd0fd-b61f-4564-a996-0505a8641a90_1024x1024.jpg?v=1512357764"
   },
   {
-    match: "Vendetta Mask" ,
-    src: "https://i0.wp.com/top10halloweencostume.com/wp-content/uploads/2017/10/Luminous-LED-Mask-V-for-Vendetta-Guy-Halloween-Costume-Cosplay-Props-3.jpg?fit=800%2C800&ssl=1" ,
+    match: "Vendetta Mask",
+    src:
+      "https://i0.wp.com/top10halloweencostume.com/wp-content/uploads/2017/10/Luminous-LED-Mask-V-for-Vendetta-Guy-Halloween-Costume-Cosplay-Props-3.jpg?fit=800%2C800&ssl=1"
   },
   {
     match: "Spiked up",
-    src: "https://img.etsystatic.com/il/dee5f4/1215216283/il_fullxfull.1215216283_98fl.jpg?version=1",
+    src:
+      "https://img.etsystatic.com/il/dee5f4/1215216283/il_fullxfull.1215216283_98fl.jpg?version=1"
   },
   {
     match: "China DGX",
-    src: "http://p.globalsources.com/IMAGES/PDT/S1157041684/LED-Display-Mask-Video-Wall.jpg",
+    src:
+      "http://p.globalsources.com/IMAGES/PDT/S1157041684/LED-Display-Mask-Video-Wall.jpg"
   }
-  
 ];
 
 const dupCards = cards.map(c => c).concat(cards);
@@ -113,6 +115,7 @@ function shuffle(array) {
 
   return array;
 }
+
 /*
 * STEP 7
 */
@@ -162,7 +165,7 @@ function checkForMatch() {
   // #1
   if (selectedCards[0].card.match === selectedCards[1].card.match) {
     // #2
-    score = score +10;
+    score = score + 10;
     timer = timer + 5;
 
     // #3
@@ -176,7 +179,7 @@ function checkForMatch() {
     });
   } else {
     // #4
-    score = score -5;
+    score = score - 5;
     timer = timer - 5;
 
     // #5
@@ -196,6 +199,7 @@ function checkForMatch() {
   // DON'T TOUCH BELOW
   scoreDiv.textContent = score;
 }
+
 /*
 * STEP 9
 */
@@ -256,31 +260,32 @@ function flipCard() {
 * STEP 12
 */
 
-function gameOver(){
-  const chosen = [...document.querySelectorAll('.match')];
+function gameOver() {
+  const chosen = [...document.querySelectorAll(".match")];
 
   // #1
-  if(chosen.length === dupCards.length){
-
+  if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = 'i didnt think you was gonna make this far good job';
+    status.textContent = "i didnt think you was gonna make this far good job";
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
-     
+
     // DON'T TOUCH BELOW
-    time.textContent = '';
+    time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
     setTimeout(() => chosen.forEach(image => image.remove()), 2000);
 
     // DON'T TOUCH BELOW
     setTimeout(() => {
-      gameoverDiv.style.display = 'block';
+      gameoverDiv.style.display = "block";
       finalScore.textContent = score;
-   }, 3000);
+    }, 3000);
   }
-}/*
+}
+
+/*
 * STEP 13
 */
 
@@ -337,4 +342,3 @@ function createBoard() {
     app.appendChild(scene);
   });
 }
-
