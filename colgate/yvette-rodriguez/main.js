@@ -270,7 +270,7 @@ function flipCard() {
       status.textContent = "Can't choose the same card twice! Try again!";
 
       // #3
-      flipback(selectedCards);
+      flipBack(selectedCards);
 
       // DON'T TOUCH BELOW
       selectedCards = [];
