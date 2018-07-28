@@ -19,24 +19,52 @@ reset.addEventListener("click", () => window.location.reload());
 // CREATE AN ARRAY NAMED cards AND INSERT OBJECTS INTO OUR ARRAY
 const cards = [
   {
-    match: "1",
+    match: "kelly",
     src:
-      "https://i.pinimg.com/564x/a0/33/34/a03334209c89761cb29771b94878ac61.jpg"
+      "http://cdn.shopify.com/s/files/1/1046/3414/articles/483657504_1024x1024.jpg?v=1466487448"
   },
   {
-    match: "2",
+    match: "Jordans",
     src:
-      "https://i.pinimg.com/564x/5f/98/25/5f98258e2031eafe62b9b01171fabf56.jpg"
+      "https://sneakerbardetroit.com/wp-content/uploads/2013/08/air-jordan-5-retro-fresh-prince-bel-air-.jpg"
   },
   {
-    match: "3",
+    match: "Legend",
     src:
-      "http://www.ctmglifestyle.com/images/SK206KCUZAYm/men-air-jordan-4-shoes-black-81NZ.jpg"
+      "https://sneakernews.com/wp-content/uploads/2016/04/jordan-11-legend-blue-restock-4-2016.jpg?w=620&h=436&crop=1"
   },
   {
-    match: "4",
+    match: "Cement",
     src:
-      "https://sneakernews.com/wp-content/uploads/2017/03/air-jordan-13-dmp-release-info-0.jpg"
+      "https://sneakerbardetroit.com/wp-content/uploads/2016/01/white-cement-air-jordan-4-og-nike-air-1.png"
+  },
+  {
+    match: "Statue",
+    src:
+      "https://sneakerbardetroit.com/wp-content/uploads/2015/04/air-jordan-9-copper-statue-02.png"
+  },
+  {
+    match: "Top 3",
+    src:
+      "https://cdn5.kicksonfire.com/wp-content/uploads/2016/11/Air-Jordan-1-Top-3-1-565x372.jpg?x76107"
+  },
+  {
+    match: "Kennedy",
+    src:
+      "https://i.pinimg.com/originals/7d/f2/f6/7df2f6e6e557443cb1de73f7c95c0e6f.jpg"
+  },
+  {
+    match: "ASAP",
+    src: "https://urbanislandz.com/wp-content/uploads/2018/05/ASAP-Rocky.jpg"
+  },
+  {
+    match: "Skylar",
+    src:
+      "https://sporteluxe.com/us/wp-content/uploads/sites/7/2018/02/skylar-diggins.jpg"
+  },
+  {
+    match: "Jilly",
+    src: "https://images.tmz.com/2018/01/11/jilly-anais-photos-3.png"
   }
 ];
 
@@ -53,7 +81,7 @@ let selectedCards = [];
 let score = 0;
 
 // #3
-let colors = ["red", "blue", "purple", "green"];
+let colors = ["#1ac957", "#d11010", "#bc16a6", "#4f4f4f"];
 
 // #4
 let timer = 60;
@@ -147,10 +175,9 @@ function checkForMatch() {
   if (selectedCards[0].card.match === selectedCards[1].card.match) {
     // #2
     score++;
-    timer = timer + 5;
 
     // #3
-    status.textContent = "Your trapping and finnesing, Keep it up Gz";
+    status.textContent = "My Guy";
 
     // DON'T TOUCH BELOW
     updateClass("goodScore", "badScore");
@@ -161,10 +188,10 @@ function checkForMatch() {
   } else {
     // #4
     score--;
-    timer = timer - 5;
+    timer = timer - 3;
 
     // #5
-    status.textContent = "Just Stop";
+    status.textContent = "Turrible";
 
     // DON'T TOUCH BELOW
     updateClass("badScore", "goodScore");
@@ -226,7 +253,7 @@ function flipCard() {
       setTimeout(() => checkForMatch(), 300);
     } else {
       // DON'T TOUCH BELOW
-      status.textContent = "Can't choose the same card twice! Try again!";
+      status.textContent = "You Picked That Card Already Goof";
 
       // #3
       flipBack(selectedCards);
@@ -247,11 +274,13 @@ function gameOver() {
   // #1
   if (chosen.length === dupCards.length) {
     // #2
-    status.textContent = "Try again next time!!";
+    status.textContent = "Game Over";
+
     // DO NOT TOUCH
     scoreTime.remove();
     status.remove();
     scoreDiv.remove();
+
     // DON'T TOUCH BELOW
     time.textContent = "";
     clearInterval(window.myMatchingGameInterval);
@@ -310,7 +339,7 @@ function createBoard() {
       imgFront.setAttribute(
         "src",
         // #3
-        "http://www.bakuganbuzz.com/wp-content/uploads/2008/12/battlegear_card_back.png"
+        "https://mistermikeyandi.files.wordpress.com/2011/01/vinnies-x-tisa1.jpg"
       );
       scene.addEventListener("click", flipCard);
     }, 4000);

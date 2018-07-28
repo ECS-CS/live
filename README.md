@@ -11,7 +11,7 @@ A collection of deployed projects from our students.
 3.  [Paul Gaddy](https://ecs-cs.github.io/live/colgate/paul-gaddy/)
 4.  [Mekhi Nixon](https://ecs-cs.github.io/live/colgate/mekhi-nixon/)
 5.  [Jada Johnson](https://ecs-cs.github.io/live/colgate/jada-johnson/)
-6.  [Jaila Johnson](https://ecs-cs.github.io/live/colgate/jaila-johnson/)
+6.  [Jaila Dunning](https://ecs-cs.github.io/live/colgate/jaila-dunning/)
 7.  [Jaeden Ausutine](https://ecs-cs.github.io/live/colgate/jaeden-ausutine/)
 8.  [Jason Herelle](https://ecs-cs.github.io/live/colgate/jason-herelle/)
 9.  [Jillian Brown](https://ecs-cs.github.io/live/colgate/jillian-brown/)

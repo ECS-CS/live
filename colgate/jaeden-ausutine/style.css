@@ -1,15 +1,12 @@
 body {
-  font-size: 40px;
+  font-size: 25px;
   letter-spacing: 2px;
-  font-style: italic;
-  background-image: url("https://i.pinimg.com/originals/9b/9c/ef/9b9cefa3d0b19285a39163230b8edb09.jpg");
-  font-family: "Wire One", sans-serif;
+  font-style: bold;
 }
 
 h1 {
-  font-family: "Pacifico", cursive;
   font-size: 75px;
-  margin: 0;
+  margin: 20px;
   padding: 0;
 }
 
@@ -53,21 +50,20 @@ h1 {
 }
 
 button {
-  background-color: #832d96;
+  background-color: #99ff66;
   border: none;
   border-radius: 8px;
   padding: 14px 40px;
-  color: white;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 25px;
+  margin-top: 25px;
   text-transform: uppercase;
   transition-duration: 0.4s;
 }
 
 button:hover {
-  background-color: #4696a0;
+  background-color: #008cba;
   color: white;
-  cursor: pointer;
+  cursor: cursor;
 }
 
 /*
